@@ -1,0 +1,73 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f8f7;
+    color: #7e6961;
+    font-family: system-ui, sans-serif;
+}
+
+.btn-primary {
+    background-color: #550b14;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #45090f;
+}
+
+.btn-secondary {
+    background-color: #cbc0b2;
+    color: #550b14;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #b8ab9a;
+}
+
+/* 3D Rotation Animation */
+@keyframes rotate3d {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.rotate-3d {
+    animation: rotate3d 20s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.rotate-3d.paused {
+    animation-play-state: paused;
+}
+
+.rotate-3d:hover {
+    animation-play-state: paused;
+}
